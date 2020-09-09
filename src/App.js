@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Layout, Affix } from "antd";
 
-import AppRoute from "./Utils/AppRoute";
 import Home from "./Views/Home";
 
 import "./App.css";
 import Navbar from "./Components/NavBar";
+import Footer from "./Components/Footer";
 
 const { Content } = Layout;
 
@@ -15,7 +15,7 @@ class App extends Component {
     super(props)
   
     this.state = {
-       PercentageA: 50,
+       PercentageA: 100,
        PercentageB: 50,
     }
   }
@@ -35,12 +35,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Affix><Navbar /></Affix>
-        <Content>
+        <Affix>
+          <Navbar 
+            ShowPercentage = {this.state.PercentageA}
+            HidePercentage = {this.state.PercentageB}
+          />
+        </Affix>
+        <Content className="content">
           <Switch>
-            <AppRoute exact path="/" component={Home} />
+            <Route exact path="/" render={(props) => <Home Text="test" />}/>
+            {/* <AppRoute  Text="Yo Yo"/> */}
           </Switch>
         </Content>
+        <Footer />
       </div>
     );
   }

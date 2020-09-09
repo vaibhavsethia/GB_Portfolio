@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Drawer, Button } from 'antd';
+import { Drawer, Button, Menu, Progress } from 'antd';
 
-import RightMenu from './RightMenu'
 import Logo from '../../Images/Logo.png'
 
 import './styles.css'
@@ -26,28 +25,19 @@ class Navbar extends Component {
   render() {
     return (
         <nav className="menuBar">
-        	<div className="logo pt3 pb3 pl3 grow">
-        		<a href="/"><img style={{width: '150px'}} alt="Name-Logo" src={Logo}></img></a>
+        	<div className="logo pl3 pt1 grow">
+        		<a href="/"><img style={{width: '131px'}} alt="Name-Logo" src={Logo}></img></a>
         	</div>
-        	<div className="menuCon">
-				    <div className="rightMenu pl3 pr3">
-	        			<RightMenu />
-				    </div>
-				    <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-		          <span className="barsBtn"></span>
-		        </Button>
-				    <Drawer
-							className="drawer"
-		          title="Gaurav Baid"
-		          placement="right"
-		          closable={false}
-		          onClose={this.onClose}
-		          visible={this.state.visible}
-		        >
-		          <RightMenu />
-		        </Drawer>
-
-        	</div>
+        	<div style={{float : 'right'}} >
+						<Menu mode="horizontal">
+							<Menu.Item className="pl2" key="home">
+								<Progress type="circle" percent={this.props.ShowPercentage} width={50}/>
+							</Menu.Item>
+							<Menu.Item className="pl2" key="home">
+								<Progress type="circle" percent={this.props.HidePercentage} width={50}/>
+							</Menu.Item>
+						</Menu>
+					</div>
         </nav>
     );
   }

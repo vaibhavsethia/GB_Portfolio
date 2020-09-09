@@ -1,43 +1,49 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
-.menuBar{
-  padding: 0 20px;
-  border-bottom: solid 1px #e8e8e8;
+.menuBar {
+  padding: 0px 20px;
+  border-bottom: solid 1px #292929;
   overflow: auto;
-  box-shadow: 0 0 30px #f3f1f1;
+  background-color: #dddddd;
 }
-.logo{
-  width: 100px;
+.logo {
+  width: 131px;
   float: left;
 }
-.logo a{
+.logo a {
   display: inline-block;
   font-size: 20px;
   text-transform: capitalize;
 }
-.menuCon{
-  width: calc(100% - 150px);
+.menuCon {
+  width: calc(100% - 191px);
   float: left;
-}
-.menuCon .ant-menu-item{
+  margin-left: 60px;
+  }
+.menuCon .ant-menu-item {
   padding: 0px 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 3px;
 }
-.menuCon .ant-menu-submenu-title{
+.menuCon .ant-menu-submenu-title {
   padding: 10px 20px;
 }
-.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+.menuCon .ant-menu-item a,
+.menuCon .ant-menu-submenu-title a {
   padding: 10px 15px;
 }
-.menuCon .ant-menu-horizontal{
+.menuCon .ant-menu-horizontal {
   border-bottom: none;
+  background-color: rgb(56, 55, 55);
 }
-.menuCon .leftMenu{
+.menuCon .leftMenu {
   float: left;
 }
-.menuCon .rightMenu{
+.menuCon .rightMenu {
   float: right;
 }
-.barsMenu{
+.barsMenu {
   float: right;
   height: 32px;
   padding: 6px;
@@ -45,54 +51,91 @@
   display: none;
   background: none;
 }
-.barsBtn{
+.barsBtn {
   display: block;
   width: 20px;
   height: 2px;
-  background: #1890ff;
+  background: black;
   position: relative;
 }
-.barsBtn:after,.barsBtn:before{
+.barsBtn:after,
+.barsBtn:before {
   content: attr(x);
   width: 20px;
   position: absolute;
   top: -6px;
   left: 0;
   height: 2px;
-  background: #1890ff;
+  background: black;
 }
-.barsBtn:after{
+.barsBtn:after {
   top: auto;
   bottom: -6px;
 }
-.ant-drawer-body{
+.ant-drawer-body {
   padding: 0;
+  background-color: #dddddd !important;
+  height: 89vh;
 }
-.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+.ant-menu-item{
+  background-color: #dddddd !important;
+  color: #bebebe !important;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
   display: inline-block;
   width: 100%;
 }
-.ant-drawer-body .ant-menu-horizontal{
+.ant-drawer-body .ant-menu-horizontal {
   border-bottom: none;
 }
-.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover{
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
   border-bottom-color: transparent;
 }
-
-@media(max-width: 767px){
-  .barsMenu{
-    display: inline-block;
-  }
-  .leftMenu,.rightMenu{
-    display: none;
-  }
-  .logo a{
-    margin-left: -20px;
-  }
-  .menuCon .ant-menu-item, .menuCon .ant-menu-submenu-title{
-    padding: 1px 20px;
-  }
-  .logo a{
-    padding: 10px 20px;
-  }
+.drawer {
+  background-blend-mode: darken;
 }
+.ant-btn-primary{
+  border-color: black !important;
+  margin-top: 26px;
+}
+.ant-drawer-header{
+  background-color: #0b4442;
+  height: 80px;
+  border-bottom: solid 1px #062726;
+}
+.ant-drawer-title{
+  margin-top: 15px;
+  color: #bebebe;
+  font-size: 25px;
+}
+.menu-item{
+  color: #bebebe;
+  font-size: 17px;
+}
+.ant-menu-item:hover{
+  border-bottom: 2px solid black !important;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover {
+  color: black;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+  margin: 0 0px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 5px !important;
+}
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+  top: 0;
+}
+.ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+  stroke: #000000;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  color: black;
+  border-bottom: 2px solid transparent;
+}
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+  margin-right: 0px !important;
+}
+

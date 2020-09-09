@@ -1,1 +1,10 @@
-@import '~antd/dist/antd.css'
+@import '~antd/dist/antd.css';
+
+.content{
+  height: 85vh;
+  background-color: #dddddd;
+}
+
+.footer{
+
+}

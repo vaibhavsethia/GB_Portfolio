@@ -1,0 +1,20 @@
+.footer{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 5px solid #111111;
+  background-color: black;
+}
+.logo-footer {
+  width: 229px;
+  margin-left: 70px;
+}
+.col-gray{
+  color: #bebebe;
+}
+.link-hover-footer{
+  color : #bebebe;
+}
+.link-hover-footer:hover{
+  text-decoration: underline;
+  color: #1FC0BB;
+}
